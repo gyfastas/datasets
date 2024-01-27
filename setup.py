@@ -262,7 +262,7 @@ setup(
     url="https://github.com/huggingface/datasets",
     download_url="https://github.com/huggingface/datasets/tags",
     license="Apache 2.0",
-    package_dir={"": "src"},
+    package_dir={"": "src"}, # 通过这种方式将src/datasets直接作为datasets import
     packages=find_packages("src"),
     package_data={
         "datasets": ["py.typed"],

@@ -1371,7 +1371,9 @@ class DatasetBuilder:
             raise NotImplementedError(
                 f"Loading a streaming dataset cached in a {type(self._fs).__name__} is not supported yet."
             )
-
+        """
+        这里的调用会把dataset返回为一个streaming dataset的类型;
+        """
         dl_manager = StreamingDownloadManager(
             base_path=base_path or self.base_path,
             download_config=DownloadConfig(token=self.token, storage_options=self.storage_options),
